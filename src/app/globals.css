@@ -6,30 +6,67 @@
     background: linear-gradient(to top, #ffcc00, #ff6600);
   }
 
-@keyframes sun {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
+  @keyframes sun {
+    0% {
+      opacity: 0;
+      transform: translateY(100vh); /* 画面の下の外から開始 */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(40vh); /* 元の位置に移動 */
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.sun {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(241, 241, 158);
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: sun 5s ease-in-out infinite;
-}
+  @keyframes happyNewYear {
+    0% {
+        opacity: 0;
+      }
+    100% {
+        opacity: 1;
+    }
+  }
+
+
+
+.sunrise-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sun {
+    width: 200px; /* 幅を適切なサイズに変更 */
+    height: 200px; /* 高さを適切なサイズに変更 */
+    background-color: rgb(231, 155, 55);
+    border-radius: 50%;
+    animation: sun 8s ease-in-out forwards;
+    display: flex;
+  }
+
+  .sunText {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+  }
+
+  .happyNewYear {
+    background-image: url('./happy-New-Year.png'); /* 画像のパスを確認 */
+    background-size: cover;
+    background-position: center;
+    animation: happyNewYear 7s ease-in-out forwards;
+    width: 600px;
+    height: 300px;
+    position: center; 
+    top: 0;
+    left: 0;
+  }
 
 .sky-gradient {
-    background: linear-gradient(to top, #faab8e, #a376a3, #63638b);
-    min-height: 100vh;
-  }
+  background: linear-gradient(to top, #faab8e, #a376a3, #63638b);
+  min-height: 100vh;
+}
