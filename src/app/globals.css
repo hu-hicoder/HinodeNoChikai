@@ -82,3 +82,7 @@
 .animated-gradient {
     animation: skyGradient 5s ease-in-out forwards;
   }
+
+.hidden {
+  display: none;
+}
