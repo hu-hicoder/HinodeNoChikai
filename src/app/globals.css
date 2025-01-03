@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sunrise {
+    background: linear-gradient(to top, #ffcc00, #ff6600);
+  }
+
+@keyframes sun {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(241, 241, 158);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: sun 5s ease-in-out infinite;
+}
+
+.sky-gradient {
+    background: linear-gradient(to top, #faab8e, #a376a3, #63638b);
+    min-height: 100vh;
+  }

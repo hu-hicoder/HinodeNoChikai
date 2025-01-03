@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Sunrise from "./components/Sunrise";
 
 
 const noto = Noto_Sans_JP({ subsets: ["latin"] });
@@ -23,6 +24,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <Sunrise />
       </body>
     </html>
   );

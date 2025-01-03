@@ -1,5 +1,6 @@
 'use client';
 import { FormEvent, useState } from 'react';
+import '../globals.css';
 
 const Hohu = () => {
   const [goal, setGoal] = useState('');
@@ -10,12 +11,12 @@ const Hohu = () => {
   };
 
   return (
-    <main className="flex flex-col items-center justify-start min-h-screen">
+    <main className="flex flex-col items-center justify-start min-h-screen sky-gradient">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-3 justify-center mt-6"
       >
-        <label htmlFor="goal" className="text-lg font-medium">今年の抱負</label>
+        <label htmlFor="goal" className="text-white text-lg font-medium">今年の抱負</label>
         <input
           type="text"
           id="goal"
