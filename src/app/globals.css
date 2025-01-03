@@ -26,6 +26,14 @@
     }
   }
 
+  @keyframes skyGradient {
+    0% {
+      background: linear-gradient(to top, #faab8e, #a376a3, #63638b);
+    }
+    100% {
+      background: linear-gradient(to top, #f38d68, #f3d2bc, #828cbb);
+    }
+  }
 
 
 .sunrise-container {
@@ -38,10 +46,10 @@
   }
 
   .sun {
-    width: 200px; /* 幅を適切なサイズに変更 */
-    height: 200px; /* 高さを適切なサイズに変更 */
-    background-color: rgb(231, 155, 55);
-    border-radius: 50%;
+    background-image: url('./kawaiitaiyou-8.png'); 
+    background-size: cover;
+    width: 300px; /* 幅を適切なサイズに変更 */
+    height: 300px; /* 高さを適切なサイズに変更 */
     animation: sun 8s ease-in-out forwards;
     display: flex;
   }
@@ -70,3 +78,7 @@
   background: linear-gradient(to top, #faab8e, #a376a3, #63638b);
   min-height: 100vh;
 }
+
+.animated-gradient {
+    animation: skyGradient 5s ease-in-out forwards;
+  }
