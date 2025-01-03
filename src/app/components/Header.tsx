@@ -1,7 +1,9 @@
+//import './Header.css';
+
 const Header = () => {
   return (
-    <header className="bg-black py-5">
-        <div className="container mx-auto">
+    <header className="bg-black py-5 sunrise">
+        <div className="container mx-auto text-center">
             <h1 className="text-white">日の出の誓い</h1>
         </div>
     </header>
